@@ -4,7 +4,7 @@ import { Sun, Moon, NotebookIcon } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@mui/material";
 import Modal from "@mui/material/Modal";
-import AddNote  from "./AddNote.js";
+import AddNote  from "./AddNote";
 
 export default function NavBar() {
   const [darkMode, setDarkMode] = useState(false);
@@ -49,8 +49,6 @@ export default function NavBar() {
         </Link>
         <div className="flex items-end space-x-4">
           <button
-            variant="ghost"
-            size="icon"
             onClick={toggleDarkMode}
             className="dark:text-gray-200 text-black  p-4 rounded-md border-2 border-solid border-black dark:border-white"
           >

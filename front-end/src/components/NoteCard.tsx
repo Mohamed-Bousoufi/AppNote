@@ -10,14 +10,14 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { FormatDate } from "@/components/FormateDate";
 
-const Card = (note) => {
+const Card = (note: any) => {
   note = note.note;
   const body = `${note.content.split(" ").slice(0, 20).join(" ")} ...`;
   return (
-    <div className="w-[40%] h-1/6 flex flex-row items-center m-6">
+    <div className="w-[60%] h-[20%] flex flex-row items-center justify-center m-6">
       <div className="card-wrapper flex flex-row items-center justify-center w-full h-full">
-        <div className="card-content dark:bg-gray-600 bg-slate-50 ">
-          <div className="text-center justify-center w-full  text-black dark:text-white p-8">
+        <div className="card-content dark:bg-gray-600 bg-slate-50 p-4">
+           <div className=" text-black dark:text-white p-2">
             <div className="flex flex-col">
               <div className="card-header flex flex-row items-center justify-between">
                 <Link
@@ -48,7 +48,7 @@ const Card = (note) => {
                   <div className="flex flex-col items-center justify-start">
                     <p className="font-medium text-sm p-2">{body}</p>
                   </div>
-                  <div className="flex flex-col items-center justify-start text-muted">
+                  <div className="flex flex-col items-center justify-center text-muted">
                     <p className="font-light text-xs p-2">
                       {FormatDate(note.updated_at)}
                     </p>
@@ -63,3 +63,4 @@ const Card = (note) => {
 };
 
 export default Card;
+

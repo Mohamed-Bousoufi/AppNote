@@ -18,9 +18,11 @@ const HomePage = () => {
     });
   },[])
   return (
-    <div className='w-full h-full flex flex-col items-center justify-items-start bg-white dark:bg-dark'>
+    <div className='w-full h-full flex flex-col items-center justify-items-center bg-white dark:bg-dark overflow-y-auto'>
       <NoteContext.Provider value={notes}>
-        <ListNotes />
+      <div className='h-full overflow-y-auto w-full p-8 flex flex-wrap items-center justify-center'>
+          <ListNotes />
+      </div>
       </NoteContext.Provider>
     </div>
 );
