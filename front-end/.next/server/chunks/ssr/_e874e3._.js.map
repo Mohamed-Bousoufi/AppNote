@@ -1,0 +1,9 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 7, "column": 0}, "map": {"version":3,"sources":["file:///Users/mbousouf/Desktop/Bousoufi_Notes/front-end/src/app/layout.tsx"],"sourcesContent":["import React from 'react';\n\n\ninterface LayoutProps {\n  children: React.ReactNode;\n}\n\nconst Layout: React.FC<LayoutProps> = ({ children }) => {\n  return (\n    <html lang=\"en\">\n    <body>\n      <div>\n        <main>\n          {children}\n        </main>\n      </div>\n    </body>\n  </html>\n  );\n};\n\nexport default Layout;"],"names":[],"mappings":";;;;;AAOA,MAAM,SAAgC,CAAC,EAAE,QAAQ,EAAE;IACjD,qBACE,8OAAC;QAAK,MAAK;kBACX,cAAA,8OAAC;sBACC,cAAA,8OAAC;0BACC,cAAA,8OAAC;8BACE;;;;;;;;;;;;;;;;;;;;;AAMX;uCAEe"}},
+    {"offset": {"line": 41, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}},
+    {"offset": {"line": 52, "column": 0}, "map": {"version":3,"sources":["file:///Users/mbousouf/Desktop/Bousoufi_Notes/front-end/node_modules/next/src/server/route-modules/app-page/vendored/rsc/react-jsx-dev-runtime.ts"],"sourcesContent":["module.exports = require('../../module.compiled').vendored[\n  'react-rsc'\n].ReactJsxDevRuntime\n"],"names":["module","exports","require","vendored","ReactJsxDevRuntime"],"mappings":";AAAAA,OAAOC,OAAO,GAAGC,QAAQ,0HAAyBC,QAAQ,CACxD,YACD,CAACC,kBAAkB","ignoreList":[0]}},
+    {"offset": {"line": 54, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}}]
+}
