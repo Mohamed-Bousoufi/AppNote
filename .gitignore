@@ -62,4 +62,4 @@ large_files/
 temp/
 uploads/
 *.node
-front-end/node_modules/@next/swc-darwin-x64/next-swc.darwin-x64.node
+/front-end/node_modules/@next/swc-darwin-x64/next-swc.darwin-x64.node
