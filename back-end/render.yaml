@@ -1,11 +1,14 @@
 services:
   - type: web
     name: Bousoufi_Note
+    runtime: python
     env: python
-    buildCommand: pip install -r requirements.txt
-    startCommand: ./run.sh
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python -m gunicorn Bousoufi_Notes.asgi:application -k uvicorn.workers.UvicornWorker"
     envVars:
       - key: PYTHON_VERSION
         value: 3.11
       - key: PORT
         value: 8000
+      - key: WEB_CONCURRENCY
+        value: 4
