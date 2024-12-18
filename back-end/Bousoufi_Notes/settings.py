@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-hpht#8m31jl%f=-a-xvmi@dwa*)$c#zxd6(t8%r%7r033uc7bm'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['app-note-i2fr-flsjho5tg-elpacos-projects-d8955f9f.vercel.app']
 
 
 # Application definition
@@ -127,7 +127,5 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CORS_ALLOWED_ORIGINS = [
-"http://localhost:3000",
-"http://127.0.0.1:3000",
-"app-note-i2fr-flsjho5tg-elpacos-projects-d8955f9f.vercel.app"
+    'https://app-note-i2fr-flsjho5tg-elpacos-projects-d8955f9f.vercel.app',
 ]
