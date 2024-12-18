@@ -28,7 +28,7 @@ To get started with Bousoufi Notes, follow these steps:
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/Mohamed-Bousoufi/Bousoufi_Notes.git```
+    git clone https://github.com/Mohamed-Bousoufi/Bousoufi_Notes.git
 
 
 Contributing
@@ -36,6 +36,4 @@ Contributions are welcome! If you would like to contribute to Bousoufi Notes, pl
 
 License
 This project is licensed under the MIT License. See the LICENSE file for more details.
-
-```
 
