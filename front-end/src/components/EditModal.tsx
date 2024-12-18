@@ -2,7 +2,7 @@ import React,{useState,useEffect,useContext} from "react";
 import Modal from "@mui/material/Modal";
 import axios from "axios";
 import { UpdateNote } from "./AddNote";
-import { NoteContext } from "@/app/page";
+import { NoteContext } from "@/app/Notecontext";
 
 interface EditModalProps {
     Notetitle : string;
@@ -23,7 +23,7 @@ export default function EditModal({Notetitle,Modalopen,onClose }: EditModalProps
         .catch((error) => {
             console.log(error);
         });
-    }, [Modalopen]);
+    }, [Notetitle]);
 
     const handleClose = () => {
         onClose();

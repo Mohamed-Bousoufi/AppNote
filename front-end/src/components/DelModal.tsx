@@ -1,7 +1,7 @@
 import Modal from "@mui/material/Modal";
 import React,{useContext} from 'react';
 import { DeleteNote } from "./AddNote";
-import { NoteContext } from "@/app/page";
+import { NoteContext } from "@/app/Notecontext";
 
 interface DelModalProps {
     Notetitle: string;
@@ -9,7 +9,7 @@ interface DelModalProps {
     onClose: () => void;
 }
 
-const DelModal = ({ Notetitle, Modalopen, onClose }: DelModalProps) => {
+const DelModal = ({ Notetitle,Modalopen, onClose }: DelModalProps) => {
     const { refreshNotes } = useContext(NoteContext);
 
     const handleClose = () => {
@@ -24,7 +24,7 @@ const DelModal = ({ Notetitle, Modalopen, onClose }: DelModalProps) => {
 
     return (
         <Modal
-        open={open}
+        open={Modalopen}
         onClose={handleClose}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"

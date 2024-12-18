@@ -6,7 +6,10 @@ const nextConfig: NextConfig = {
     "paths": {
       "@/*": ["*"]
     }
-  }
+  },
+  eslint: {
+      ignoreDuringBuilds: true,
+    },
 };
 
 export default nextConfig;

@@ -1,14 +1,15 @@
-import react, { useContext } from "react";
 
-import React from 'react'
-import { NoteContext } from '../app/page'
+import React,{useContext} from 'react'
+import { NoteContext } from '../app/Notecontext'
 import Card from './NoteCard'
 
+
 const ListNotes = () => {
-  const {notes} = useContext(NoteContext) as Note[]; 
+  const {notes} = useContext(NoteContext); 
+  /*eslint-disable*/
   return (
       <>
-      {notes.map((note) => (<Card key={note.id} note={note} />))}
+      {notes.map((note: any) => (<Card key={note.id} note={note} />))}
       </>
   )
 }

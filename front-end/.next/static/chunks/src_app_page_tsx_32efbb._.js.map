@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 7, "column": 0}, "map": {"version":3,"sources":["file:///Users/mbousouf/Desktop/Bousoufi_Notes/front-end/src/app/page.tsx"],"sourcesContent":["\"use client\"\nimport React, { createContext, useState, useEffect } from 'react';\nimport axios from 'axios';\nimport ListNotes from '@/components/ListNotes'; // Assuming this is the correct import\n\nexport const NoteContext = createContext([]);\n\n"],"names":[],"mappings":";;;AACA;AADA;;AAKO,MAAM,4BAAc,CAAA,GAAA,6JAAA,CAAA,gBAAa,AAAD,EAAE,EAAE"}},
-    {"offset": {"line": 17, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}}]
-}

@@ -1,9 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 7, "column": 0}, "map": {"version":3,"sources":["file:///Users/mbousouf/Desktop/Bousoufi_Notes/front-end/src/components/NavBar.jsx"],"sourcesContent":["import React from 'react'\nimport { FaRegStickyNote } from 'react-icons/fa';\n\nconst NavBar = () => {\n  return (\n    <div>\n        <FaRegStickyNote size={32}></FaRegStickyNote>\n    </div>\n  )\n}\n\nexport default NavBar"],"names":[],"mappings":";;;;AAAA;AACA;;;;AAEA,MAAM,SAAS;IACb,qBACE,8OAAC;kBACG,cAAA,8OAAC,8IAAA,CAAA,kBAAe;YAAC,MAAM;;;;;;;;;;;AAG/B;uCAEe"}},
-    {"offset": {"line": 32, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}},
-    {"offset": {"line": 38, "column": 0}, "map": {"version":3,"sources":["file:///Users/mbousouf/Desktop/Bousoufi_Notes/front-end/src/app/layout.tsx"],"sourcesContent":["import React from 'react';\nimport NavBar from '@/components/NavBar';\n\n\ninterface LayoutProps {\n  children: React.ReactNode;\n}\n\nconst Layout: React.FC<LayoutProps> = ({ children }) => {\n  return (\n    <div>\n      <NavBar />\n      <main>\n        {children}\n      </main>\n    </div>\n  );\n};\n\nexport default Layout;"],"names":[],"mappings":";;;;AACA;;;AAOA,MAAM,SAAgC,CAAC,EAAE,QAAQ,EAAE;IACjD,qBACE,8OAAC;;0BACC,8OAAC,4HAAA,CAAA,UAAM;;;;;0BACP,8OAAC;0BACE;;;;;;;;;;;;AAIT;uCAEe"}},
-    {"offset": {"line": 68, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}}]
-}

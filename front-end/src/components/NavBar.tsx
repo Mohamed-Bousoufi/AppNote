@@ -4,7 +4,7 @@ import { Sun, Moon, NotebookIcon } from "lucide-react";
 import Link from "next/link";
 import Modal from "@mui/material/Modal";
 import {AddNote}  from "./AddNote";
-import { NoteContext } from "@/app/page";
+import { NoteContext } from "@/app/Notecontext";
 
 export default function NavBar() {
   const { refreshNotes } = useContext(NoteContext);
@@ -30,7 +30,7 @@ export default function NavBar() {
   };
 
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: { preventDefault: () => void; }) => {
     e.preventDefault();
     if (!title || !body) {
       alert("Please fill all the fields");

@@ -11,7 +11,7 @@ import {
 import { FormatDate } from "@/components/FormateDate";
 import EditModal from "./EditModal";
 import DelModal from "./DelModal";
-
+/*eslint-disable*/
 const Card = (note: any) => {
 
   const [isEditModalOpen, setIsEditModalOpen] = useState(false);

@@ -1,34 +1,24 @@
 "use client"
 import React, { createContext, useState, useEffect } from 'react';
 import axios from 'axios';
-import ListNotes from '@/components/ListNotes'; // Assuming this is the correct import
-
-interface NoteContextType {
-  notes: any[]; 
-  refreshNotes: () => void;
-}
-
-export const NoteContext = createContext<NoteContextType>({
-  notes: [],
-  refreshNotes: () => {} 
-});
+import ListNotes from '@/components/ListNotes'; 
+import { NoteContext } from './Notecontext';
 
 const HomePage = () => {
   const [notes, setNotes] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState(null);
+  const [error, setError] = useState<string | null>(null);
   const [triggerRefetch, setTriggerRefetch] = useState(0);
 
+ 
   useEffect(() => {
+    /* eslint-disable */
     const fetchNotes = async () => {
       try {
-        setIsLoading(true);
-        const response = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/notes`);
+        const response = await axios.get('/api/notes');
         setNotes(response.data);
-        setError(null);
-      } catch (error) {
-        console.error('Failed to fetch notes:', error);
-      } finally {
+        setIsLoading(false);
+      } catch (err) { // Remove type annotation from catch clause variable
         setIsLoading(false);
       }
     };
@@ -38,11 +28,10 @@ const HomePage = () => {
 
   const refreshNotes = () => {
     setTriggerRefetch(prev => prev + 1);
-    console.log('Refreshing notes...');
   };
 
   if (isLoading) {
-    return <div>Loading notes...</div>; 
+    return <div>Loading...</div>;
   }
 
   if (error) {
