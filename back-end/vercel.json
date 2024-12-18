@@ -9,7 +9,7 @@
     "routes": [
       {
         "src": "Bousoufi_Notes/(.*)",
-        "dest": "/wsgi.py"
+        "dest": "Bousoufi_Notes/wsgi.py"
       }
     ]
   }
