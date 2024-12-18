@@ -1,0 +1,15 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "Bousoufi_Notes/wsgi.py",
+        "use": "@vercel/python"
+      }
+    ],
+    "routes": [
+      {
+        "src": "Bousoufi_Notes/(.*)",
+        "dest": "/wsgi.py"
+      }
+    ]
+  }

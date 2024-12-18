@@ -1,0 +1,7 @@
+Django==4.2.5
+djangorestframework==3.14.0
+psycopg2-binary==2.9.6  # For PostgreSQL database
+gunicorn==20.1.0  # WSGI HTTP Server for UNIX
+django-cors-headers==3.14.0  # For handling CORS
+python-dotenv==1.0.0  # For environment variable management
+requests==2.31.0 
