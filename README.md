@@ -18,16 +18,17 @@ Bousoufi Notes is a simple and intuitive application designed to help users crea
 To get started with Bousoufi Notes, follow these steps:
 
 ![Code Snippet](/code_snippet/npminstall.png)
+
 ![Code Snippet](/code_snippet/requirement.png)
+
 ![Code Snippet](/code_snippet/pythonmanger.png)
+
 ![Code Snippet](/code_snippet/npmrun.png)
 
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/Mohamed-Bousoufi/Bousoufi_Notes.git
-
-
+    git clone https://github.com/Mohamed-Bousoufi/Bousoufi_Notes.git```
 
 
 Contributing
