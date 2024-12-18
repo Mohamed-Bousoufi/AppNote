@@ -31,11 +31,13 @@ SECRET_KEY = 'django-insecure-hpht#8m31jl%f=-a-xvmi@dwa*)$c#zxd6(t8%r%7r033uc7bm
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = [
-    '.onrender.com',    # Allow all subdomains on render
-    'localhost',
-    '127.0.0.1'
-]
+# ALLOWED_HOSTS = [
+#     '.onrender.com',    # Allow all subdomains on render
+#     'localhost',
+#     '127.0.0.1'
+# ]
+
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -136,9 +138,11 @@ STATIC_URL = '/static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-CORS_ALLOWED_ORIGINS = [
-    'https://app-note-i2fr-flsjho5tg-elpacos-projects-d8955f9f.vercel.app',
-]
+# CORS_ALLOWED_ORIGINS = [
+#     'https://app-note-i2fr-flsjho5tg-elpacos-projects-d8955f9f.vercel.app',
+# ]
+
+CORS_ALLOWED_ORIGINS = ["*"]
 CORS_ALLOW_CREDENTIALS = True
 
 REST_FRAMEWORK = {
