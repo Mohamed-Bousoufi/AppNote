@@ -17,10 +17,10 @@ Bousoufi Notes is a simple and intuitive application designed to help users crea
 ## Getting Started
 To get started with Bousoufi Notes, follow these steps:
 
-![Code Snippet](/code_snippet/carbon.png)
-![Code Snippet](/code_snippet/carbon(1).png)
-![Code Snippet](/code_snippet/carbon(2).png)
-![Code Snippet](/code_snippet/carbon(3).png)
+![Code Snippet](/code_snippet/npminstall.png)
+![Code Snippet](/code_snippet/requirement.png)
+![Code Snippet](/code_snippet/pythonmanger.png)
+![Code Snippet](/code_snippet/npmrun.png)
 
 
 1. Clone the repository:
