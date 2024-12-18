@@ -1,6 +1,7 @@
 services:
   - type: web
     name: Bousoufi_Note
+    plan: free
     runtime: python
     env: python
     buildCommand: "pip install -r requirements.txt"
