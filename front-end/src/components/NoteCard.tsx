@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState} from "react";
 import "../components/NoteCard.css";
 import Link from "next/link";
 import { Ellipsis, SquarePen, Trash2 } from "lucide-react";
@@ -9,12 +9,24 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { FormatDate } from "@/components/FormateDate";
+import EditModal from "./EditModal";
+import DelModal from "./DelModal";
 
 const Card = (note: any) => {
+
+  const [isEditModalOpen, setIsEditModalOpen] = useState(false);
+  const [isDelModalOpen, setIsDelModalOpen] = useState(false);
+  
+  const handleEditClick = () => {
+    setIsEditModalOpen(true);
+  };
+  const handleDeleteClick = () => {
+    setIsDelModalOpen(true);
+  };
   note = note.note;
-  const body = `${note.content.split(" ").slice(0, 20).join(" ")} ...`;
+  const body = `${note.content.split(" ").slice(0, 15).join(" ")} ...`;
   return (
-    <div className="w-[60%] h-[20%] flex flex-row items-center justify-center m-6">
+    <div className="w-[50%] h-[20%] flex flex-row items-center justify-center m-6">
       <div className="card-wrapper flex flex-row items-center justify-center w-full h-full">
         <div className="card-content dark:bg-gray-600 bg-slate-50 p-4">
            <div className=" text-black dark:text-white p-2">
@@ -33,11 +45,11 @@ const Card = (note: any) => {
                     <Ellipsis className="w-6 h-6" />
                   </DropdownMenuTrigger>
                   <DropdownMenuContent className="bg-white dark:bg-dark">
-                    <DropdownMenuItem>
+                    <DropdownMenuItem onClick={handleEditClick}>
                       <SquarePen className="w-6 h-6"></SquarePen>
                       Edit
                     </DropdownMenuItem>
-                    <DropdownMenuItem>
+                    <DropdownMenuItem onClick={handleDeleteClick}>
                       <Trash2 className="w-6 h-6 text-red-700"></Trash2>
                       <span className="text-red-700 text-base">Delete</span>
                     </DropdownMenuItem>
@@ -46,11 +58,11 @@ const Card = (note: any) => {
               </div>
               <div className="flex flex-col items-center justify-center">
                   <div className="flex flex-col items-center justify-start">
-                    <p className="font-medium text-sm p-2">{body}</p>
+                    <p className="font-medium text-sm text-wrap text-center ">{body}</p>
                   </div>
                   <div className="flex flex-col items-center justify-center text-muted">
                     <p className="font-light text-xs p-2">
-                      {FormatDate(note.updated_at)}
+                      {FormatDate(note.created_at)}
                     </p>
                   </div>
               </div>
@@ -58,6 +70,13 @@ const Card = (note: any) => {
           </div>
         </div>
       </div>
+      {isEditModalOpen && (
+        <EditModal  Notetitle={note.title} Modalopen={isEditModalOpen} onClose={() => setIsEditModalOpen(false)} />
+      )}
+
+      {isDelModalOpen && (
+        <DelModal  Notetitle={note.title} Modalopen={isDelModalOpen} onClose={() => setIsDelModalOpen(false)} />
+      )}
     </div>
   );
 };

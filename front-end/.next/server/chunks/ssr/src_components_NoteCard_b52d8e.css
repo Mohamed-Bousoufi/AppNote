@@ -424,6 +424,10 @@ img, video {
   height: 2.25rem;
 }
 
+.h-\[20\%\] {
+  height: 20%;
+}
+
 .h-\[40\%\] {
   height: 40%;
 }
@@ -438,46 +442,6 @@ img, video {
 
 .h-px {
   height: 1px;
-}
-
-.h-1\/4 {
-  height: 25%;
-}
-
-.h-1\/2 {
-  height: 50%;
-}
-
-.h-\[100\%\] {
-  height: 100%;
-}
-
-.h-\[\] {
-  height: ;
-}
-
-.h-\[60\] {
-  height: 60px;
-}
-
-.h-\[80\%\] {
-  height: 80%;
-}
-
-.h-\[25\%\] {
-  height: 25%;
-}
-
-.h-\[20\%\] {
-  height: 20%;
-}
-
-.max-h-\[80vh\] {
-  max-height: 80vh;
-}
-
-.max-h-full {
-  max-height: 100%;
 }
 
 .w-10 {
@@ -512,8 +476,8 @@ img, video {
   width: 100%;
 }
 
-.w-\[40\%\] {
-  width: 40%;
+.w-\[50\%\] {
+  width: 50%;
 }
 
 .w-\[60\%\] {
@@ -530,14 +494,6 @@ img, video {
 
 .min-w-\[8rem\] {
   min-width: 8rem;
-}
-
-.min-w-\[calc\(33\.333\%-1rem\)\] {
-  min-width: calc(33.333% - 1rem);
-}
-
-.flex-1 {
-  flex: 1;
 }
 
 .flex-grow {
@@ -578,8 +534,8 @@ img, video {
   flex-wrap: wrap;
 }
 
-.flex-nowrap {
-  flex-wrap: nowrap;
+.items-start {
+  align-items: flex-start;
 }
 
 .items-end {
@@ -610,20 +566,12 @@ img, video {
   justify-content: space-evenly;
 }
 
-.justify-items-start {
-  justify-items: start;
-}
-
 .justify-items-center {
   justify-items: center;
 }
 
 .gap-2 {
   gap: .5rem;
-}
-
-.gap-4 {
-  gap: 1rem;
 }
 
 .space-x-2 > :not([hidden]) ~ :not([hidden]) {
@@ -658,6 +606,10 @@ img, video {
 
 .whitespace-nowrap {
   white-space: nowrap;
+}
+
+.text-wrap {
+  text-wrap: wrap;
 }
 
 .rounded-lg {
@@ -703,9 +655,9 @@ img, video {
   border-color: rgb(229 229 229 / var(--tw-border-opacity, 1));
 }
 
-.border-gray-300 {
+.border-secondray {
   --tw-border-opacity: 1;
-  border-color: rgb(209 213 219 / var(--tw-border-opacity, 1));
+  border-color: rgb(236 80 44 / var(--tw-border-opacity, 1));
 }
 
 .bg-gray-50 {
@@ -741,11 +693,6 @@ img, video {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
-}
-
-.bg-gray-100 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(243 244 246 / var(--tw-bg-opacity, 1));
 }
 
 .fill-current {
@@ -833,6 +780,10 @@ img, video {
   text-align: center;
 }
 
+.text-right {
+  text-align: right;
+}
+
 .text-base {
   font-size: 1rem;
   line-height: 1.5rem;
@@ -884,6 +835,11 @@ img, video {
 .text-black {
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity, 1));
+}
+
+.text-dark {
+  --tw-text-opacity: 1;
+  color: rgb(20 22 39 / var(--tw-text-opacity, 1));
 }
 
 .text-gray-400 {

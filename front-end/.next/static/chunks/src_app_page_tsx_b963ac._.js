@@ -7,7 +7,7 @@
   "chunks": [
     "static/chunks/src_components_NoteCard_3c0028.css",
     "static/chunks/node_modules_0b1656._.js",
-    "static/chunks/src_dd8d64._.js"
+    "static/chunks/src_b53fcf._.js"
   ],
   "source": "dynamic"
 });

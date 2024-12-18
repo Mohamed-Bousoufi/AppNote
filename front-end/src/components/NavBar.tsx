@@ -1,12 +1,15 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect,useContext } from "react";
 import { Sun, Moon, NotebookIcon } from "lucide-react";
 import Link from "next/link";
-import { Button } from "@mui/material";
 import Modal from "@mui/material/Modal";
-import AddNote  from "./AddNote";
+import {AddNote}  from "./AddNote";
+import { NoteContext } from "@/app/page";
 
 export default function NavBar() {
+  const { refreshNotes } = useContext(NoteContext);
+
+
   const [darkMode, setDarkMode] = useState(false);
   const [title, setTitle] = useState("");
   const [body, setBody] = useState("");
@@ -26,19 +29,22 @@ export default function NavBar() {
     setDarkMode(!darkMode);
   };
 
-  const NewNote ={
-    title: title,
-    content: body
-  }
 
-  const handleSubmit = (e) => {
-    console.log("submit");
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (!title || !body) {
       alert("Please fill all the fields");
       return;
     }
-    AddNote(NewNote);
+    const NewNote ={
+      title: title,
+      content: body
+    }
+    await AddNote(NewNote);
+    refreshNotes();
+    setTitle("");
+    setBody("");
+    handleClose();
   };
 
   return (
@@ -75,7 +81,7 @@ export default function NavBar() {
                 </div>
                 <div className="flex flex-col items-center justify-around w-[80%]  my-4">
                   <input
-                    className="form-control border-2 border-solid border-gray-400 p-4 rounded-md m-2 w-[100%]"
+                    className="form-control border-2 border-solid border-gray-400 p-4 rounded-md m-2 w-[100%] text-dark"
                     id="exampleFormControlInput1"
                     placeholder="Title"
                     value={title}
@@ -83,7 +89,7 @@ export default function NavBar() {
                   />
 
                   <textarea
-                    className="form-control border-2 border-solid border-gray-400 p-4 rounded-md m-2 w-[100%] h-[60%]"
+                    className="form-control border-2 border-solid border-gray-400 p-4 rounded-md m-2 w-[100%] h-[60%] text-dark"
                     id="exampleFormControlTextarea1"
                     rows={4}
                     placeholder="Content"

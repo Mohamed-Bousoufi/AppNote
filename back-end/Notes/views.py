@@ -28,16 +28,19 @@ def notes_list(request):
 @api_view(['GET', 'PUT', 'DELETE'])
 def solo_note(request, title):
     try:
-        note = Note.objects.get(title=title)
+        notes = Note.objects.filter(title=title)
+        if not notes.exists():
+            return Response(status=status.HTTP_404_NOT_FOUND)
+        note = notes.first()  # Get the first note if multiple are found
     except Note.DoesNotExist:
-        return Response(status=status.HTTP_404_NOT_FOUND)
+            return Response(status=status.HTTP_404_NOT_FOUND)
 
     # """this for the solo note in read mode"""
     if request.method == 'GET':
         serializer = NoteSerializer(note)
         return Response(serializer.data)
     # """this for the solo note in write mode"""
-    elif request.method == 'POST':
+    elif request.method == 'PUT':
         serializer = NoteSerializer(note, data=request.data)
         if serializer.is_valid():
             serializer.save()
